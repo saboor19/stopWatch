@@ -1,0 +1,78 @@
+:root {
+    --orange: #ffa600;
+    --grey: #f3f3f3;
+    --white: #fff;
+    --base-color: var(--orange);
+  }
+  
+  /* Mixin's */
+  @mixin transition {
+    transition: all 0.5s ease-in-out;
+  }
+  
+  @mixin corners($radius) {
+    border-radius: $radius;
+  }
+  
+  body {
+    background: var(--base-color);
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    height: 100%;
+  }
+  
+  .wrapper {
+
+    width: 800px;
+    margin: 30vh auto;
+    color: var(--white);
+    text-align: center;
+    border: rgb(254, 7, 7) solid 5px;
+    border-radius: 10px;
+  }
+  
+  h1,
+  h2,
+  h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 2.6em;
+    text-transform: uppercase;
+  }
+  
+  #seconds,
+  #tens {
+    font-size: 2em;
+  }
+  
+  button {
+    @include corners(5px);
+    background: var(--base-color);
+    color: var(--white);
+    border: solid 1px var(--white);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 18px 10px;
+    width: 180px;
+    margin: 10px;
+    outline: none;
+  }
+  
+  button:hover {
+    @include transition;
+    background: var(--white);
+    border: solid 1px var(--white);
+    color: var(--base-color);
+  }
+  #lap-times{
+
+    list-style-type: none;
+    text-align: center;
+    font-size: 2rem;
+
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+    text-transform: uppercase;
+      color: #f3f3f3;
+  
+  }
